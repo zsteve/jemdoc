@@ -1,49 +1,90 @@
-# jemdoc: menu{MENU}{index.html}, showsource
-= jemdoc -- light markup
-[http://stanford.edu/~jacobm/ Jacob Mattingley] ([jacobm@stanford.edu])
+{{<h1><b>Stephen Zhang's homepage</b></h1>}}
 
-jemdoc is a light text-based markup language designed for creating 
-websites. It takes a text file written with [example.html jemdoc markup], an
-optional configuration file and an optional menu file, and makes static websites
-that look something like this one, [http://cvxmod.net/ that one] or
-[http://www.stanford.edu/class/ee364a/ another one].
+== About 
 
-jemdoc was inspired by [http://www.methods.co.nz/asciidoc/ AsciiDoc], which is a
-text document format. AsciiDoc is great, and lots of the ideas from AsciiDoc are
-copied in jemdoc. The main differences are that jemdoc is simpler (you could say
-deliberately feature poor) and has more consistent syntax.
+I am a PhD student at the University of Melbourne interested in probabilistic machine learning, generative modelling and applied mathematics to tackle inverse problems arising in complex systems, especially those arising in biology and physics.
 
-[download.html Download jemdoc.]
+In May-September 2025, I was an intern with [https://marcocuturi.net/ Marco Cuturi] at Apple MLR in Paris, working on optimal transport for flow-based generative models.
 
-~~~
-Version +0.7.3+ was released on 2012-11-27 with some small bug fixes.
-See the [revision.html release notes].
-~~~
+In April-September 2024, I visited [https://profiles.stanford.edu/xiaojie-qiu Xiaojie Qiu]'s group at Stanford, working on generative modelling for single cell genomics. 
 
-[https://github.com/jem/jemdoc Contribute to jemdoc on github.]
+Previously, I earned a MSc in Mathematics at the University of British Columbia.
 
-== Goals
-- Simple, consistent syntax.
-- $\mbox{\LaTeX}$ [latex.html equation support].
-- [tables.html Table support].
-- Portability. The (single) jemdoc [http://www.python.org/ Python] file \+
-  single css file \+ your input file {{&rarr;}} html.
-- Based on [http://www.w3.org/Style/CSS/ CSS] so formatting specifics are
-  independent of jemdoc.
-- Production of clean,
-  [http://validator.w3.org/check/referer
-  standards-compliant] [http://www.w3.org/TR/xhtml11/ XHTML 1.1].
-- Minimal bells and whistles, but simple fallback to raw html if required.
+== Interests...
 
-== License
-Copyright \C 2007--2012 Jacob Mattingley.
+*{{<span class="blue">...theory and algorithms</span>}}*: {{<span class="blue">generative modelling, optimal transport, inverse problems, deep learning, scientific computing</span>}}
 
-jemdoc is free software; you can redistribute it and\/or modify it under the
-terms of the [http://www.gnu.org/licenses/gpl-3.0.html GNU General Public
-License] as published by the Free Software Foundation; either version 3 of the
-License, or (at your option) any later version.
+*{{<span class="green">...applications</span>}}*: {{<span class="green">systems and computational biology, biophysics, scientific inverse problems</span>}}
 
-jemdoc is distributed in the hope that it will be useful, but WITHOUT ANY
-WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE. See the [http://www.gnu.org/licenses/gpl-3.0.html GNU
-General Public License] for more details.
+== Selected papers
+
+/*\** denotes equal contribution. /
+
+
+- [https://arxiv.org/abs/2509.25519 Flow Matching with Semidiscrete Couplings]\n
+Alireza Mousavi-Hosseini\*, *Stephen Zhang\**, Michal Klein, Marco Cuturi\n
+/Preprint, 2025/
+
+- [https://arxiv.org/abs/2505.16644 Learning non-equilibrium diffusions with Schrödinger bridges: from exactly solvable to simulation-free] \n
+*Stephen Zhang* and Michael Stumpf\n
+ /NeurIPS 2025/
+
+- [https://arxiv.org/abs/2505.13197 Inferring stochastic dynamics with growth from cross-sectional data]\n
+*Stephen Zhang*, Suryanarayana Maddu, Xiaojie Qiu and Victor Chardès\n
+/NeurIPS 2025/
+
+- [https://www.cell.com/cell-systems/abstract/S2405-4712(25)00232-7 Learning cell-specific networks from dynamics and geometry of single cells] \n
+*Stephen Zhang* and Michael Stumpf\n
+/Cell Systems, 2025/
+	  
+- [https://projecteuclid.org/journals/annals-of-applied-probability/volume-34/issue-1A/Toward-a-mathematical-theory-of-trajectory-inference/10.1214/23-AAP1969.short Towards a mathematical theory of trajectory inference]\n
+Hugo Lavenant\*, *Stephen Zhang\**, Young-Heon Kim, Geoffrey Schiebinger\n
+/Annals of Applied Probability, 2024/
+
+- [https://arxiv.org/abs/2307.09816 Manifold learning with sparse regularised optimal transport]\n
+*Stephen Zhang\**, Gilles Mordant\*, Tim Matsumoto, Geoffrey Schiebinger\n
+/Preprint, 2023/
+
+- [https://arxiv.org/abs/2205.07146 Trajectory Inference via Mean-field Langevin in Path Space]\n
+Lénaïc Chizat\*, *Stephen Zhang\**, Matthieu Heitz, Geoffrey Schiebinger\n
+/NeurIPS 2022/
+
+- [https://journals.aps.org/pre/abstract/10.1103/PhysRevE.100.042415 Persistent exclusion processes: Inertia, drift, mixing, and correlation]\n
+*Stephen Zhang*, Aaron Chong and Barry Hughes\n
+/Physical Review E, 2020/
+
+== Fun
+
+{{
+<div style="display:flex; align-items:center; gap:10px;">
+  <div style="width:128px; text-align:center;">
+    <img src="points_ifm.gif" alt="I-FM"
+         style="width:128px; height:128px; display:block; margin:0 auto;">
+    <div><b>(a) I-FM</b></div>
+  </div>
+  <div style="width:128px; text-align:center;">
+    <img src="points_minibatch_ot.gif" alt="OT-FM"
+         style="width:128px; height:128px; display:block; margin:0 auto;">
+    <div><b>(b) OT-FM</b></div>
+  </div>
+  <div style="width:128px; text-align:center;">
+    <img src="points_semidiscrete.gif" alt="SDFM"
+         style="width:128px; height:128px; display:block; margin:0 auto;">
+    <div><b>(c) SD-FM</b></div>
+  </div>
+  <p style="max-width:800px;">
+	The animations on the left illustrate measure transport from a standard Gaussian to the image of a Penrose triangle, using a flow matching generative model trained using (a) independently coupled data (I-FM), (b) minibatch optimal transport couplings (OT-FM) with batch size 256, and (c) using a semidiscrete OT coupling (SD-FM).
+	<br>
+	<a href=https://ott-jax.readthedocs.io/tutorials/linear/950_semidiscrete.html>Semidiscrete Flow Matching</a> trains a flow model that approximates the dynamical Benamou-Brenier optimal interpolation between the two measures.
+	While this toy example is two dimensional, in our recent paper <a href=https://arxiv.org/abs/2509.25519>Flow Matching with Semidiscrete Couplings</a> we scale this to train better flow models on large (millions) datasets in high (~10k dimensions) datasets. 
+  </p>
+</div>
+}}
+
+
+== Links 
+
+- [https://scholar.google.com/citations?user=nuOYO60AAAAJ&hl=en Google Scholar] 
+
+- [mailto:syz<at>syz.id.au email]
+
